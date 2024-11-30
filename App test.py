@@ -5,17 +5,18 @@ from rich.console import Console
 from rich.table import Table
 from rich.layout import Layout
 from rich.console import ConsoleDimensions
+from HelloWorld.App import table
 
-def main():
-    n = -1;
-    i = 0;
-    prices = [];
-    list = [];
-    names = [];
-    lis = [];
-    pri = [];
-    rows = 6;
-    c = 0;
+def make_table1():
+    n = -1
+    i = 0
+    prices = []
+    list = []
+    names = []
+    lis = []
+    pri = []
+    rows = 6
+    c = 0
     w = 0
 
     item1 = "Trumna Prime Set"
@@ -60,7 +61,11 @@ def main():
                       # lis[t][2]
                       )
         t += 1
-    table1 = table
+    return table
+
+
+def main():
+    table1 = make_table1()
 
     n = -1;
     i = 0;
