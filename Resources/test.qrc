@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>image_2test.png</file>
+    <file>Warframe market logo crop.ico</file>
+    <file>Order1.png</file>
+    <file>Search.png</file>
+    <file>gotolink.png</file>
+    <file>Square.png</file>
+    <file>image_4Custom.png</file>
+    <file>image_1.png</file>
+    <file>PlatIcon.png</file>
+  </qresource>
+</RCC>
