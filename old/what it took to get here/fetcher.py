@@ -44,17 +44,6 @@ def main(item_link, arcane):
     return lis
 
 
-# threading.Thread(target= main, args=("item1","trumna_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-# threading.Thread(target= main, args=("ma2","quassus_prime_set", False)).start()
-#
+
+
 
