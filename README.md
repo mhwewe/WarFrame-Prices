@@ -1,4 +1,4 @@
-I'm Creating an application that automates my tasks and at the same time I'm learning python. 
+I'm Creating an application that automates my tasks and using it as a challenge to learn python, and taking every opportunity to learn more. 
 
 What this app does is istead of having 10 tabs open and switching between them constantly, I just run this app and I get multiple item prices in the same page.
 ![image](https://github.com/user-attachments/assets/0f05f919-44e8-4480-89d3-a740fb7e382d)
@@ -27,3 +27,7 @@ TODO:
 What I learned:
 
 ALWAYS set the correct names in Qt Designer before copieng everything so you dont have to rename 198 labels and buttons ect...
+
+use OOP
+
+the exec() function is insane
