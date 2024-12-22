@@ -26,7 +26,7 @@ TODO:
 
 What I learned:
 
-ALWAYS set the correct names in Qt Designer before copieng everything so you dont have to rename 198 labels and buttons ect...
+ALWAYS set the correct names in Qt Designer before copying everything so you dont have to rename 198 labels and buttons ect...
 
 use OOP
 
