@@ -1,7 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from fetcher import main
 
-
 def make_search_thread(self, item, item_name, start_index):
     thread = QtCore.QThread()
     worker = SearchWorker(item.text())
