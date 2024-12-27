@@ -25,6 +25,8 @@ TODO:
 
 10- Add auto refresh for all of the  items, also add a way to customize how long every refresh takes with the minimum of once per 5 seconds(so that the app does not crash)
 
+11- don'tlet the search button work until the last search has finished.
+
 
 What I learned:
 
