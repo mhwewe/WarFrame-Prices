@@ -23,6 +23,8 @@ TODO:
 
 9- maybe add a button next to the item name that opens the candle chart of price history
 
+10- Add auto refresh for all of the  items, also add a way to customize how long every refresh takes with the minimum of once per 5 seconds(so that the app does not crash)
+
 
 What I learned:
 
