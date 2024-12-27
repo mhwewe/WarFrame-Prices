@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="newPrefix">
+    <file>minimize_btn_pressed.png</file>
+    <file>maximize_btn_pressed.png</file>
+    <file>close_btn_pressed.png</file>
+    <file>minimize_btn.png</file>
+    <file>close_btn.png</file>
+    <file>maximize_btn.png</file>
     <file>a2360153958_10.jpg</file>
     <file>gotolink.png</file>
     <file>image_2test.png</file>
