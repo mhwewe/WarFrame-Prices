@@ -5,7 +5,7 @@ What this app does is istead of having 10 tabs open and switching between them c
 
 
 TODO:
-1- add a button next to the Name of the item to send me to the items page.
+1- add a button next to the Name of the item to send me to the items page. ✅
 
 2- make a fully transparent user input for the name of the items and make the app be able to save the last entered item for each item slot ✅
 
