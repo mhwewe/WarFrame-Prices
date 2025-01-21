@@ -1,5 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from fetcher import main
+from new_fetcher import main
+import time
 
 def make_search_thread(self, item, item_name, start_index):
     thread = QtCore.QThread()
@@ -11,6 +12,7 @@ def make_search_thread(self, item, item_name, start_index):
     thread.finished.connect(thread.deleteLater)
     worker.result.connect(lambda result: self.search(result, start_index, item_name))
     thread.start()
+    time.sleep(0.05)
     return worker, thread
 
 
@@ -25,6 +27,7 @@ def make_search_thread_s(self, item, item_name, start_index):
     thread.finished.connect(thread.deleteLater)
     worker.result.connect(lambda result: self.search(result, start_index, item_name))
     thread.start()
+    time.sleep(0.05)
     return worker, thread
 
 

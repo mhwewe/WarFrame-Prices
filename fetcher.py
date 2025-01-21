@@ -1,13 +1,16 @@
-import pywmapi as wm
+import requests
+from Api_Orders import Orders
 
 def main(item_link, arcane):
-    n = -1;prices = [];names = [];lis = [];rows = 100;c = 0
+    n = 0;prices = [];names = [];lis = [];rows = 100;c = 0
 
-    l = wm.items.get_orders(item_link)
-    w = len(l)
+    l = Orders(item_link)
+    print(l[len(l)-1])
 
-    while n >= -w:
-        if ("OrderType.sell" in str(l[n])) and ("Status.ingame" in str(l[n])) and arcane is True and ("mod_rank=5" in str(l[n])):
+    while n <= len(l):
+        print('y')
+        if (("order_type" == 'sell') in l) and (("status" == 'ingame') in l) and (('mod_rank' == '5') in l):
+            print("yo")
             Name = str(l[n]).split("ingame_name='")
             Name = Name[1].split("', avatar")
             name = Name[0]
@@ -18,7 +21,7 @@ def main(item_link, arcane):
             price = int(Price[0])
             prices.append(price)
             c += 1
-        if ("OrderType.sell" in str(l[n])) and ("Status.ingame" in str(l[n])) and arcane is False:
+        if (("order_type" == 'sell') in l) and (("status" == 'ingame') in l):
             Name = str(l[n]).split("ingame_name='")
             Name = Name[1].split("', avatar")
             name = Name[0]
@@ -29,7 +32,7 @@ def main(item_link, arcane):
             price = int(Price[0])
             prices.append(price)
             c += 1
-        n = n - 1
+        n = n + 1
     if rows > c:
         rows = c
     i = 0;
@@ -44,6 +47,4 @@ def main(item_link, arcane):
     return lis
 
 
-
-
-
+test = main("arcane_energize", True)

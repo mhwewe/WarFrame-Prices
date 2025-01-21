@@ -1,5 +1,6 @@
 import sys
 import json
+import webbrowser
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QLabel, QLineEdit,QPushButton
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -19,11 +20,13 @@ class MainApp(QtWidgets.QMainWindow):
         self.search_buttons = [self.findChild(QPushButton, f"search_{i}_btn") for i in range(1, 13)]  # Search Buttons
         self.names = [self.findChild(QLabel, f"name_{i}") for i in range(1, 70)]  # Item names
         self.prices = [self.findChild(QLabel, f"price_{i}") for i in range(1, 70)]  # Item Prices
+        self.gotolinks = [self.findChild(QPushButton, f"gotolink_{i}_btn") for i in range(1, 13)]
 
         # Connect signals
         for i in range(1, 13):
             self.search_buttons[i - 1].clicked.connect(getattr(self, f"start_search_thread_{i}"))
             self.search_buttons[i - 1].clicked.connect(lambda _, x=i: getattr(self, f"save_item_{x}")())
+            self.gotolinks[i - 1].clicked.connect(getattr(self, f"gotolink{i}"))
             with open(f'Items.json')as file:
                 content = json.load(file)
                 getattr(self, f"item_{i}").setText(self._translate("MainWindow", content[f"item{i}"]))
@@ -45,14 +48,19 @@ class MainApp(QtWidgets.QMainWindow):
         if i <= 9:
             #Making a search thread for the emitted signal
             exec(f"def start_search_thread_{i}(self): self.worker_{i}, self.thread_{i} = make_search_thread(self, self.item_{i}, 'item_{i}', {(i - 1) * 6})")
-            #
             exec(f"def search_{i}(self, result): self.search(result, {(i - 1) * 6}, 'item_{i}')")
         else:
-            # Making a search thread for the emitted signal
+            #Making a search thread for the emitted signal
             exec(f"def start_search_thread_{i}(self): self.worker_{i}, self.thread_{i} = make_search_thread_s(self, self.item_{i}, 'item_{i}', {54 + (i - 10) * 5})")
             exec(f"def search_{i}(self, result): self.search(result, {(i - 1) * 5}, 'item_{i}')")
 
+        with open('Items.json') as file:
+             content = json.load(file)
+        exec(f"def gotolink{i}(self):"
+             f"webbrowser.open_new(f'https://warframe.market/items/{content[f'item{i}']}')")
+
         exec(f"def save_item_{i}(self): self.save_item(self.item_{i}, {i}, {Items_dict})")
+
 
     #Sets the names and prices in the gui
     def search(self, result, start_index, item):
