@@ -1,13 +1,11 @@
 <RCC>
   <qresource prefix="newPrefix">
-    <file>minimize_btn_pressed.png</file>
-    <file>maximize_btn_pressed.png</file>
-    <file>close_btn_pressed.png</file>
-    <file>minimize_btn.png</file>
-    <file>close_btn.png</file>
-    <file>maximize_btn.png</file>
-    <file>a2360153958_10.jpg</file>
+    <file>image_3.png</file>
+    <file>image_2.png</file>
+    <file>Search.png</file>
+    <file>icons8-close-100.png</file>
     <file>gotolink.png</file>
+    <file>icons8-minimize-100.png</file>
     <file>image_2test.png</file>
     <file>Warframe market logo crop.ico</file>
     <file>Order1.png</file>

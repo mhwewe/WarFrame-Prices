@@ -1,5 +1,6 @@
 import sys
 import json
+import time
 import webbrowser
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QLabel, QLineEdit,QPushButton
@@ -43,6 +44,10 @@ class MainApp(QtWidgets.QMainWindow):
         with open("Items.json", "w") as f:
             json.dump(Items_dict, f)
 
+    def get_content(self):
+        with open('Items.json') as file:
+             content = json.load(file)
+        return content
 
     for i in range(1, 13):
         if i <= 9:
@@ -54,8 +59,7 @@ class MainApp(QtWidgets.QMainWindow):
             exec(f"def start_search_thread_{i}(self): self.worker_{i}, self.thread_{i} = make_search_thread_s(self, self.item_{i}, 'item_{i}', {54 + (i - 10) * 5})")
             exec(f"def search_{i}(self, result): self.search(result, {(i - 1) * 5}, 'item_{i}')")
 
-        with open('Items.json') as file:
-             content = json.load(file)
+        content = get_content(None)
         exec(f"def gotolink{i}(self):"
              f"webbrowser.open_new(f'https://warframe.market/items/{content[f'item{i}']}')")
 

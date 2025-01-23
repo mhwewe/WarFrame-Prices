@@ -1,13 +1,11 @@
 import sys
 import json
-import time
 import webbrowser
 from PyQt5 import QtWidgets, uic
-from PyQt5.QtWidgets import QLabel, QLineEdit,QPushButton
+from PyQt5.QtWidgets import QLabel, QLineEdit, QPushButton, QApplication, QMainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Resources import bigback_rc
+from PyQt5.QtCore import Qt, QPoint
 from Resources import test_rc
-from Resources import transparent_rc
 from make_search_thread import make_search_thread, SearchWorker, make_search_thread_s
 
 class MainApp(QtWidgets.QMainWindow):
@@ -16,14 +14,27 @@ class MainApp(QtWidgets.QMainWindow):
         # Load the .ui file from the root directory
         uic.loadUi("uitest.ui", self)
 
+        #title bar removal
+        self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
+        self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+
         # Define our widgets
         self.items = [self.findChild(QLineEdit, f"item_{i}") for i in range(1, 13)]  # User Inputs
         self.search_buttons = [self.findChild(QPushButton, f"search_{i}_btn") for i in range(1, 13)]  # Search Buttons
         self.names = [self.findChild(QLabel, f"name_{i}") for i in range(1, 70)]  # Item names
         self.prices = [self.findChild(QLabel, f"price_{i}") for i in range(1, 70)]  # Item Prices
         self.gotolinks = [self.findChild(QPushButton, f"gotolink_{i}_btn") for i in range(1, 13)]
+        self.close_btn = self.findChild(QPushButton, "close_btn")
+        self.minimize_btn = self.findChild(QPushButton, "minimize_btn")
+
+        self.old_pos = self.pos()
+        self.mouse_pressed = False
+
+
 
         # Connect signals
+        self.close_btn.clicked.connect(self.close)
+        self.minimize_btn.clicked.connect(self.showMinimized)
         for i in range(1, 13):
             self.search_buttons[i - 1].clicked.connect(getattr(self, f"start_search_thread_{i}"))
             self.search_buttons[i - 1].clicked.connect(lambda _, x=i: getattr(self, f"save_item_{x}")())
@@ -36,8 +47,8 @@ class MainApp(QtWidgets.QMainWindow):
 
     _translate = QtCore.QCoreApplication.translate
     #Function for saving last entered item name
-    with open('Items.json') as y:
-        Items_dict = json.load(y)
+    with open('Items.json') as yoo:
+        Items_dict = json.load(yoo)
     def save_item(self, item_index, i, test):
         Items_dict = test
         Items_dict.update({f"item{i}": f"{item_index.text()}"})

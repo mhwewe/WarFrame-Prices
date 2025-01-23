@@ -44,15 +44,74 @@
    <iconset resource="Resources/test.qrc">
     <normaloff>:/newPrefix/Warframe market logo crop.ico</normaloff>:/newPrefix/Warframe market logo crop.ico</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#title_frame {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: #1e1f22;
+}
+
+#main_frame {
+	border-bottom-right-radius: 5px;
+	border-buttom-left-radius: 5px;
+	background-color: #d8d8d8;
+}
+
+#title_frame QLabel {
+	color:#fff;
+	background-color: transparent;
+}
+
+#icon_label {
+	min-width: 30px;
+	min-height: 30px;
+	max-width: 30px;
+	max-height: 30px;
+	border-radius: 15px;
+	background-color:#fff;
+	border: 1px solid #fff;
+}
+
+#title_frame QPushButton {
+	border: none;
+	width: 50px;
+	height: 40px;
+}
+
+#minimize_btn:hover {
+	background-color: #2c2e32;
+}
+
+#close_btn:hover {
+	background-color: #f23f43;
+}
+
+#close_btn, #title_frame {
+	border-top-right-radius: 5px;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">border-buttom-left-radius: 5px;
+border-buttom-right-radius: 5px;</string>
+   </property>
    <widget class="QFrame" name="title_frame">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1021</width>
+      <width>1017</width>
       <height>32</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="maximumSize">
      <size>
@@ -61,7 +120,7 @@
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(30, 31, 34);</string>
+     <string notr="true"/>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -90,39 +149,48 @@
        <property name="spacing">
         <number>0</number>
        </property>
-       <item>
-        <widget class="QLabel" name="Icon">
-         <property name="minimumSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-image: url(:/newPrefix/Warframe market logo crop.ico);</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="Title">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>200</width>
-           <height>41</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Warframe Market</string>
-         </property>
-        </widget>
-       </item>
       </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="Icon">
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-image: url(:/newPrefix/Warframe market logo crop.ico);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="Title">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Warframe Market</string>
+       </property>
+       <property name="indent">
+        <number>6</number>
+       </property>
+      </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer">
@@ -145,45 +213,32 @@
        <property name="sizeConstraint">
         <enum>QLayout::SetDefaultConstraint</enum>
        </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QPushButton" name="minimize_btn">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>40</width>
+           <width>32</width>
            <height>32</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+border-buttom-right-radius: 5px;
+border-buttom-left-radius: 5px;</string>
          </property>
          <property name="text">
           <string/>
          </property>
          <property name="icon">
           <iconset resource="Resources/test.qrc">
-           <normaloff>:/newPrefix/minimize_btn.png</normaloff>
-           <normalon>:/newPrefix/minimize_btn_pressed.png</normalon>:/newPrefix/minimize_btn.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>40</width>
-           <height>32</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="maximize_btn">
-         <property name="maximumSize">
-          <size>
-           <width>40</width>
-           <height>32</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="Resources/test.qrc">
-           <normaloff>:/newPrefix/maximize_btn.png</normaloff>
-           <normalon>:/newPrefix/maximize_btn_pressed.png</normalon>:/newPrefix/maximize_btn.png</iconset>
+           <normaloff>:/newPrefix/icons8-minimize-100.png</normaloff>:/newPrefix/icons8-minimize-100.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -197,17 +252,22 @@
         <widget class="QPushButton" name="close_btn">
          <property name="maximumSize">
           <size>
-           <width>40</width>
-           <height>32</height>
+           <width>32</width>
+           <height>40</height>
           </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+border-buttom-right-radius: 5px;
+border-buttom-left-radius: 5px;</string>
          </property>
          <property name="text">
           <string/>
          </property>
          <property name="icon">
           <iconset resource="Resources/test.qrc">
-           <normaloff>:/newPrefix/close_btn.png</normaloff>
-           <normalon>:/newPrefix/close_btn_pressed.png</normalon>:/newPrefix/close_btn.png</iconset>
+           <normaloff>:/newPrefix/icons8-close-100.png</normaloff>:/newPrefix/icons8-close-100.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -221,6 +281,8 @@
      </item>
     </layout>
     <zorder>horizontalSpacer</zorder>
+    <zorder>Title</zorder>
+    <zorder>Icon</zorder>
    </widget>
    <widget class="QFrame" name="main_frame">
     <property name="geometry">
@@ -230,6 +292,10 @@
       <width>1021</width>
       <height>981</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-buttom-left-radius: 5px;
+border-buttom-right-radius: 5px;</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -307,10 +373,10 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="gotolink_3_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -745,10 +811,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="search_10_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2175,10 +2241,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="search_1_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2293,10 +2359,10 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="gotolink_10_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2825,10 +2891,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="search_4_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -4297,10 +4363,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="gotolink_12_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -4400,10 +4466,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="search_12_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -4467,10 +4533,10 @@ color: rgb(255, 255, 255);border-image: url(:/newPrefix/image_3.png);</string>
      <widget class="QPushButton" name="search_6_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -4502,10 +4568,10 @@ color: rgb(255, 255, 255);border-image: url(:/newPrefix/image_3.png);</string>
      <widget class="QPushButton" name="gotolink_6_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -4653,10 +4719,10 @@ border-image: url(:/newPrefix/image_3.png);</string>
      <widget class="QPushButton" name="gotolink_11_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -4870,10 +4936,10 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="search_9_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -4953,10 +5019,10 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="gotolink_4_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -4975,9 +5041,9 @@ selection-color: rgb(112, 255, 124);</string>
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>-30</y>
        <width>1371</width>
-       <height>1171</height>
+       <height>1201</height>
       </rect>
      </property>
      <property name="acceptDrops">
@@ -5878,10 +5944,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="gotolink_8_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -5914,10 +5980,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="gotolink_9_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -5985,10 +6051,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="gotolink_1_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -6037,10 +6103,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="search_7_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -6119,10 +6185,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="gotolink_5_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -6187,10 +6253,10 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="search_8_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -6222,10 +6288,10 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="gotolink_7_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -6258,10 +6324,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="gotolink_2_btn">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -6380,10 +6446,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="search_5_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -6415,10 +6481,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="search_11_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -6966,10 +7032,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="search_3_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -7001,10 +7067,10 @@ selection-color: rgb(112, 255, 124);</string>
      <widget class="QPushButton" name="search_2_btn">
       <property name="geometry">
        <rect>
-        <x>4</x>
-        <y>2</y>
-        <width>15</width>
-        <height>15</height>
+        <x>2</x>
+        <y>0</y>
+        <width>20</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -7582,8 +7648,6 @@ selection-color: rgb(112, 255, 124);</string>
  </widget>
  <resources>
   <include location="Resources/test.qrc"/>
-  <include location="Resources/bigback.qrc"/>
-  <include location="Resources/transparent.qrc"/>
  </resources>
  <connections/>
 </ui>
