@@ -19,14 +19,6 @@ class MainApp(QtWidgets.QWidget):
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
 
-        # def mousePressEvent(self, event):
-        #     self.dragPos = event.globalPosition().toPoint()
-        #
-        # def mouseMoveEvent(self, event):
-        #     self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
-        #     self.dragPos = event.globalPosition().toPoint()
-        #     event.accept()
-
         # Define our widgets
         self.items = [self.findChild(QLineEdit, f"item_{i}") for i in range(1, 13)]  # User Inputs
         self.search_buttons = [self.findChild(QPushButton, f"search_{i}_btn") for i in range(1, 13)]  # Search Buttons
@@ -35,6 +27,7 @@ class MainApp(QtWidgets.QWidget):
         self.gotolinks = [self.findChild(QPushButton, f"gotolink_{i}_btn") for i in range(1, 13)]
         self.close_btn = self.findChild(QPushButton, "close_btn")
         self.minimize_btn = self.findChild(QPushButton, "minimize_btn")
+        self.refresh_btn = self.findChild(QPushButton,"refresh_btn")
 
         self.old_pos = self.pos()
         self.mouse_pressed = False
@@ -42,6 +35,7 @@ class MainApp(QtWidgets.QWidget):
         # Connect signals
         self.close_btn.clicked.connect(self.close)
         self.minimize_btn.clicked.connect(self.showMinimized)
+        self.refresh_btn.clicked.connect(self.refresh)
         for i in range(1, 13):
             self.search_buttons[i - 1].clicked.connect(getattr(self, f"start_search_thread_{i}"))
             self.search_buttons[i - 1].clicked.connect(lambda _, x=i: getattr(self, f"save_item_{x}")())
@@ -52,6 +46,12 @@ class MainApp(QtWidgets.QWidget):
                 getattr(self, f"search_{i}_btn").click()
 
     _translate = QtCore.QCoreApplication.translate
+    #Functions
+    def refresh(self):
+        for i in range(1,13):
+            getattr(self, f"search_{i}_btn").click()
+
+
     # Function for saving last entered item name
     with open('Items.json') as yoo:
         Items_dict = json.load(yoo)
@@ -101,7 +101,14 @@ class MainApp(QtWidgets.QWidget):
                     getattr(self, f"price_{i + 1}").setText(_translate("MainWindow", result[c][1]))
                     c += 1
         except Exception:
-            getattr(self, item).setText(_translate("MainWindow", "Item does not exist"))
+            if start_index <= 48:
+                for i in range(start_index, start_index + 6):
+                    getattr(self, f"name_{i + 1}").setText(_translate("MainWindow", "Item does not exist"))
+                    c += 1
+            else:
+                for i in range(start_index, start_index + 5):
+                    getattr(self, f"name_{i + 1}").setText(_translate("MainWindow", "Item does not exist"))
+                    c += 1
 
 
 def mainn():  # sets up the PyQt5 application

@@ -16,7 +16,7 @@ TODO:
 
 5- fix item names not being centered ✅
 
-6- make the titel bar az thin as discord(also add icon and a titel for god sake)
+6- make the titel bar az thin as discord(also add icon and a titel for god sake)(almost done)
 
 7- maybe HARD ONE: make the app launch immediately and then load the prices ✅
 
@@ -24,9 +24,9 @@ TODO:
 
 9- maybe add a button next to the item name that opens the candle chart of price history
 
-10- Add auto refresh for all of the  items, also add a way to customize how long every refresh takes with the minimum of once per 5 seconds(so that the app does not crash)
+10- Add auto refresh for all of the  items, also add a way to customize how long every refresh takes with the minimum of once per 5 seconds(so that the app does not crash)(Added a refresh button instead)
 
-11- don'tlet the search button work until the last search has finished.
+11- don't let the search button work until the last search has finished.
 
 
 What I learned:

@@ -7,35 +7,40 @@
     <x>0</x>
     <y>0</y>
     <width>1017</width>
-    <height>999</height>
+    <height>1003</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>677</width>
-    <height>778</height>
+    <height>781</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>1017</width>
-    <height>999</height>
+    <height>1003</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#title_frame {
+   <string notr="true">#main_backgorund {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#title_frame {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	background-color: #1e1f22;
 }
 
 #main_frame {
-	border-bottom-right-radius: 5px;
-	border-buttom-left-radius: 5px;
 	background-color: #d8d8d8;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 #title_frame QLabel {
@@ -61,14 +66,36 @@
 
 #minimize_btn:hover {
 	background-color: #2c2e32;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#refresh_btn:hover {
+	background-color: rgba(60, 135, 156, 150);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+
 }
 
 #close_btn:hover {
 	background-color: #f23f43;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 #close_btn, #title_frame {
-	border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#Form {
+	background-color: transparent;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -98,10 +125,16 @@
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>34</height>
+      </size>
+     </property>
      <property name="maximumSize">
       <size>
        <width>16777215</width>
-       <height>32</height>
+       <height>34</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -144,6 +177,12 @@
           <height>32</height>
          </size>
         </property>
+        <property name="maximumSize">
+         <size>
+          <width>34</width>
+          <height>34</height>
+         </size>
+        </property>
         <property name="styleSheet">
          <string notr="true">border-image: url(:/newPrefix/Warframe market logo crop.ico);</string>
         </property>
@@ -166,7 +205,7 @@
         <property name="maximumSize">
          <size>
           <width>200</width>
-          <height>41</height>
+          <height>32</height>
          </size>
         </property>
         <property name="text">
@@ -178,9 +217,44 @@
        </widget>
       </item>
       <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="refresh_btn">
+        <property name="maximumSize">
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/newPrefix/refresh.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -238,7 +312,7 @@ border-buttom-left-radius: 5px;</string>
           <property name="maximumSize">
            <size>
             <width>32</width>
-            <height>40</height>
+            <height>32</height>
            </size>
           </property>
           <property name="styleSheet">
@@ -270,6 +344,8 @@ border-buttom-left-radius: 5px;</string>
      <zorder>Icon</zorder>
      <zorder></zorder>
      <zorder></zorder>
+     <zorder>horizontalSpacer_2</zorder>
+     <zorder>refresh_btn</zorder>
     </widget>
    </item>
    <item>
@@ -5022,8 +5098,8 @@ selection-color: rgb(112, 255, 124);</string>
        <rect>
         <x>0</x>
         <y>-30</y>
-        <width>1371</width>
-        <height>1201</height>
+        <width>1017</width>
+        <height>999</height>
        </rect>
       </property>
       <property name="acceptDrops">

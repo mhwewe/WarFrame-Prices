@@ -2,6 +2,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from new_fetcher import main
 import time
 
+
 def make_search_thread(self, item, item_name, start_index):
     thread = QtCore.QThread()
     worker = SearchWorker(item.text())
@@ -39,20 +40,19 @@ class SearchWorker(QtCore.QObject):
         super().__init__()
         self.search_text = search_text
 
-
     def run(self):
         try:
-            result = main(self.search_text, arcane=False)  #initializes the item fetcher
+            result = main(self.search_text, arcane=False)  # initializes the item fetcher
             self.result.emit(result)
+
         except Exception:
             self.result.emit(None)
         finally:
             self.finished.emit()
 
-
     def run_2(self):
         try:
-            result = main(self.search_text, arcane=True)  #initializes the item fetcher
+            result = main(self.search_text, arcane=True)  # initializes the item fetcher
             self.result.emit(result)
         except Exception:
             self.result.emit(None)
