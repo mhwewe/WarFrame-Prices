@@ -1,9 +1,8 @@
 <RCC>
   <qresource prefix="newPrefix">
     <file>big_6.png</file>
-    <file>item_2.png</file>
-    <file>small_1.png</file>
     <file>image_3.png</file>
+    <file>search_gray.png</file>
     <file>image_2.png</file>
     <file>Search.png</file>
     <file>icons8-close-100.png</file>
