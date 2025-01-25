@@ -1,7 +1,8 @@
 I'm Creating an application that automates my tasks and using it as a challenge to learn python, and taking every opportunity to learn more. 
 
 What this app does is istead of having 10 tabs open and switching between them constantly, I just run this app and I get multiple item prices in the same page.
-![image](https://github.com/user-attachments/assets/6ac1a55b-173f-4cd9-94d7-bd5f27d3afbe)
+![image](https://github.com/user-attachments/assets/66bc82fa-4ab2-4c3d-96bd-07d2b5cb4409)
+
 
 
 
