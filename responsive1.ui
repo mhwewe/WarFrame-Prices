@@ -343,7 +343,6 @@ border-buttom-left-radius: 5px;</string>
      <zorder>Title</zorder>
      <zorder>Icon</zorder>
      <zorder></zorder>
-     <zorder></zorder>
      <zorder>horizontalSpacer_2</zorder>
      <zorder>refresh_btn</zorder>
     </widget>
@@ -5097,16 +5096,16 @@ selection-color: rgb(112, 255, 124);</string>
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-30</y>
+        <y>0</y>
         <width>1017</width>
-        <height>999</height>
+        <height>1003</height>
        </rect>
       </property>
       <property name="acceptDrops">
        <bool>true</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-image: url(:/newPrefix/image_1.png);</string>
+       <string notr="true">border-image: url(:/newPrefix/background.png);</string>
       </property>
       <property name="text">
        <string/>

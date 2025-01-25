@@ -2,7 +2,7 @@ import sys
 import json
 import webbrowser
 from PyQt5 import QtWidgets, uic
-from PyQt5.QtWidgets import QLabel, QLineEdit, QPushButton, QApplication, QMainWindow
+from PyQt5.QtWidgets import QLabel, QLineEdit, QPushButton, QApplication, QMainWindow, QGraphicsBlurEffect, QFrame
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, QPoint
 from Resources import test_rc
@@ -25,9 +25,12 @@ class MainApp(QtWidgets.QWidget):
         self.names = [self.findChild(QLabel, f"name_{i}") for i in range(1, 70)]  # Item names
         self.prices = [self.findChild(QLabel, f"price_{i}") for i in range(1, 70)]  # Item Prices
         self.gotolinks = [self.findChild(QPushButton, f"gotolink_{i}_btn") for i in range(1, 13)]
+        self.backs = [self.findChild(QFrame, f"back_{i}") for i in range(1, 13)]
         self.close_btn = self.findChild(QPushButton, "close_btn")
         self.minimize_btn = self.findChild(QPushButton, "minimize_btn")
-        self.refresh_btn = self.findChild(QPushButton,"refresh_btn")
+        self.refresh_btn = self.findChild(QPushButton, "refresh_btn")
+        self.main_background = self.findChild(QLabel, "main_background")
+        self.order_buttons = [self.findChild(QPushButton, f"order_{i}_btn") for i in range(1, 13)]
 
         self.old_pos = self.pos()
         self.mouse_pressed = False
@@ -39,6 +42,9 @@ class MainApp(QtWidgets.QWidget):
         for i in range(1, 13):
             self.search_buttons[i - 1].clicked.connect(getattr(self, f"start_search_thread_{i}"))
             self.search_buttons[i - 1].clicked.connect(lambda _, x=i: getattr(self, f"save_item_{x}")())
+            self.search_buttons[i - 1].clicked.connect(
+                lambda state, x=i, btn=self.search_buttons[i - 1]: self.disabler(i, btn))
+
             self.gotolinks[i - 1].clicked.connect(getattr(self, f"gotolink{i}"))
             with open(f'Items.json') as file:
                 content = json.load(file)
@@ -46,11 +52,22 @@ class MainApp(QtWidgets.QWidget):
                 getattr(self, f"search_{i}_btn").click()
 
     _translate = QtCore.QCoreApplication.translate
-    #Functions
-    def refresh(self):
-        for i in range(1,13):
-            getattr(self, f"search_{i}_btn").click()
 
+    # Functions
+    def disabler(self, i, btn):
+        print(f"{btn.objectName()} disabled {i}")
+        btn.setEnabled(False)
+
+    def enabler(self, i, btn):
+        print(btn.objectName() + " enabled " + i)
+        if i <= 9:
+            self.names[i * 6].valueChanged(btn.setEnabled(True))
+        else:
+            self.names[i * 5 - 3].valueChanged(btn.setEnabled(True))
+
+    def refresh(self):
+        for i in range(1, 13):
+            getattr(self, f"search_{i}_btn").click()
 
     # Function for saving last entered item name
     with open('Items.json') as yoo:
@@ -104,10 +121,21 @@ class MainApp(QtWidgets.QWidget):
             if start_index <= 48:
                 for i in range(start_index, start_index + 6):
                     getattr(self, f"name_{i + 1}").setText(_translate("MainWindow", "Item does not exist"))
+                    backo = (start_index / 6) + 1;
+                    backo = int(backo)
+                    getattr(self, f"back_{backo}").setGraphicsEffect(QGraphicsBlurEffect())
+                    self.order_buttons[backo - 1].setGraphicsEffect(QGraphicsBlurEffect())
+                    self.gotolinks[backo - 1].setGraphicsEffect(QGraphicsBlurEffect())
+
                     c += 1
             else:
                 for i in range(start_index, start_index + 5):
+                    backo = (start_index / 6) + 1
+                    backo = int(backo)
                     getattr(self, f"name_{i + 1}").setText(_translate("MainWindow", "Item does not exist"))
+                    getattr(self, f"back_{backo + 1}").setGraphicsEffect(QGraphicsBlurEffect())
+                    self.order_buttons[backo].setGraphicsEffect(QGraphicsBlurEffect())
+                    self.gotolinks[backo].setGraphicsEffect(QGraphicsBlurEffect())
                     c += 1
 
 
