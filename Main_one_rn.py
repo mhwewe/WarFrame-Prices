@@ -33,6 +33,9 @@ class MainApp(QtWidgets.QWidget):
         self.main_background = self.findChild(QLabel, "main_background") # background photo
         self.order_buttons = [self.findChild(QPushButton, f"order_{i}_btn") for i in range(1, 13)] # order buttons
 
+        # self.main_background.setStyleSheet(
+        #                     "border-bottom-left-radius : 5px; "
+        #                     "border-bottom-right-radius : 5px")
 
         # Connect signals
         self.close_btn.clicked.connect(self.close) # close button
@@ -53,13 +56,6 @@ class MainApp(QtWidgets.QWidget):
 
     _translate = QtCore.QCoreApplication.translate # idk
     # Functions
-    def mousePressEvent(self, event):
-        self.oldPos = event.globalPos()
-
-    def mouseMoveEvent(self, event):
-        delta = QPoint(event.globalPos() - self.oldPos)
-        self.move(self.x() + delta.x(), self.y() + delta.y())
-        self.oldPos = event.globalPos()
 
     # disables the button that was pressed
     def disabler(self, i, btn):
@@ -106,6 +102,14 @@ class MainApp(QtWidgets.QWidget):
 
         exec(f"def save_item_{i}(self): self.save_item(self.item_{i}, {i}, {Items_dict})")
 
+    def mousePressEvent(self, event):
+        self.oldPos = event.globalPos()
+
+    def mouseMoveEvent(self, event):
+        delta = QPoint(event.globalPos() - self.oldPos)
+        self.move(self.x() + delta.x(), self.y() + delta.y())
+        self.oldPos = event.globalPos()
+
 
 
     # Sets the names and prices in the gui and enables the buttons when the names and prices are set
@@ -150,14 +154,6 @@ class MainApp(QtWidgets.QWidget):
                     # self.order_buttons[backo].setGraphicsEffect(QGraphicsBlurEffect())
                     # self.gotolinks[backo].setGraphicsEffect(QGraphicsBlurEffect())
                     c += 1
-
-    def mousePressEvent(self, event):
-        self.oldPosition = event.globalpos()
-
-    def mouseMoveEvent(self, event):
-        delta = QPoint(event.globalPos() - self.oldPosition)
-        print(delta)
-
 
 
 def mainn():  # sets up the PyQt5 application

@@ -26,19 +26,13 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">#main_backgorund {
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-#title_frame {
+   <string notr="true">#title_frame {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	background-color: #1e1f22;
 }
 
 #main_frame {
-	background-color: #d8d8d8;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
@@ -46,16 +40,6 @@
 #title_frame QLabel {
 	color:#fff;
 	background-color: transparent;
-}
-
-#icon_label {
-	min-width: 30px;
-	min-height: 30px;
-	max-width: 30px;
-	max-height: 30px;
-	border-radius: 15px;
-	background-color:#fff;
-	border: 1px solid #fff;
 }
 
 #title_frame QPushButton {
@@ -90,12 +74,6 @@
 #close_btn, #title_frame {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-}
-
-#Form {
-	background-color: transparent;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -141,10 +119,7 @@
       <string notr="true"/>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <property name="spacing">
@@ -219,10 +194,10 @@
       <item>
        <spacer name="horizontalSpacer_2">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Vertical</enum>
         </property>
         <property name="sizeType">
-         <enum>QSizePolicy::Minimum</enum>
+         <enum>QSizePolicy::Fixed</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -251,10 +226,10 @@
       <item>
        <spacer name="horizontalSpacer">
         <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+         <enum>Qt::Vertical</enum>
         </property>
         <property name="sizeType">
-         <enum>QSizePolicy::Maximum</enum>
+         <enum>QSizePolicy::Fixed</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
@@ -353,10 +328,7 @@ border-buttom-left-radius: 5px;</string>
       <string notr="true"/>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <widget class="QLineEdit" name="item_1">
       <property name="geometry">
@@ -420,10 +392,7 @@ color: rgb(255, 255, 255);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_3_btn">
        <property name="geometry">
@@ -465,10 +434,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_37">
        <property name="geometry">
@@ -492,10 +458,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_65">
         <property name="geometry">
@@ -627,16 +590,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_65">
         <property name="geometry">
@@ -858,10 +818,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_10_btn">
        <property name="geometry">
@@ -902,10 +859,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_10">
        <property name="geometry">
@@ -929,10 +883,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_7">
         <property name="geometry">
@@ -1086,16 +1037,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_7">
         <property name="geometry">
@@ -1367,10 +1315,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_5">
        <property name="geometry">
@@ -1394,10 +1339,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_19">
         <property name="geometry">
@@ -1551,16 +1493,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_19">
         <property name="geometry">
@@ -1832,10 +1771,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_22">
        <property name="geometry">
@@ -1859,10 +1795,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_37">
         <property name="geometry">
@@ -2016,16 +1949,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_37">
         <property name="geometry">
@@ -2288,10 +2218,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_1_btn">
        <property name="geometry">
@@ -2323,10 +2250,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_8_btn">
        <property name="geometry">
@@ -2406,10 +2330,7 @@ color: rgb(255, 255, 255);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_10_btn">
        <property name="geometry">
@@ -2482,10 +2403,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_16">
        <property name="geometry">
@@ -2509,10 +2427,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_31">
         <property name="geometry">
@@ -2666,16 +2581,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_31">
         <property name="geometry">
@@ -2938,10 +2850,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_4_btn">
        <property name="geometry">
@@ -2982,10 +2891,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_28">
        <property name="geometry">
@@ -3009,10 +2915,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_49">
         <property name="geometry">
@@ -3166,16 +3069,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_49">
         <property name="geometry">
@@ -3438,10 +3338,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_12_btn">
        <property name="geometry">
@@ -3482,10 +3379,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_31">
        <property name="geometry">
@@ -3509,10 +3403,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_55">
         <property name="geometry">
@@ -3644,16 +3535,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_55">
         <property name="geometry">
@@ -3884,10 +3772,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_19">
        <property name="geometry">
@@ -3911,10 +3796,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_25">
         <property name="geometry">
@@ -4068,16 +3950,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_25">
         <property name="geometry">
@@ -4340,10 +4219,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_1_btn">
        <property name="geometry">
@@ -4375,10 +4251,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_7_btn">
        <property name="geometry">
@@ -4410,10 +4283,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_12_btn">
        <property name="geometry">
@@ -4462,10 +4332,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_5_btn">
        <property name="geometry">
@@ -4513,10 +4380,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_12_btn">
        <property name="geometry">
@@ -4580,10 +4444,7 @@ color: rgb(255, 255, 255);border-image: url(:/newPrefix/image_3.png);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_6_btn">
        <property name="geometry">
@@ -4615,10 +4476,7 @@ color: rgb(255, 255, 255);border-image: url(:/newPrefix/image_3.png);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_6_btn">
        <property name="geometry">
@@ -4651,10 +4509,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_9_btn">
        <property name="geometry">
@@ -4766,10 +4621,7 @@ border-image: url(:/newPrefix/image_3.png);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_11_btn">
        <property name="geometry">
@@ -4881,10 +4733,7 @@ color: rgb(255, 255, 255);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_3_btn">
        <property name="geometry">
@@ -4948,10 +4797,7 @@ color: rgb(255, 255, 255);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_11_btn">
        <property name="geometry">
@@ -4983,10 +4829,7 @@ color: rgb(255, 255, 255);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_9_btn">
        <property name="geometry">
@@ -5066,10 +4909,7 @@ color: rgb(255, 255, 255);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_4_btn">
        <property name="geometry">
@@ -5089,7 +4929,7 @@ selection-color: rgb(112, 255, 124);</string>
        </property>
       </widget>
      </widget>
-     <widget class="QLabel" name="main_backgorund">
+     <widget class="QLabel" name="main_background">
       <property name="enabled">
        <bool>true</bool>
       </property>
@@ -5133,10 +4973,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_34">
        <property name="geometry">
@@ -5160,10 +4997,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_60">
         <property name="geometry">
@@ -5295,16 +5129,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_60">
         <property name="geometry">
@@ -5535,10 +5366,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_13">
        <property name="geometry">
@@ -5562,10 +5390,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_13">
         <property name="geometry">
@@ -5719,16 +5544,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_13">
         <property name="geometry">
@@ -5991,10 +5813,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_8_btn">
        <property name="geometry">
@@ -6027,10 +5846,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_9_btn">
        <property name="geometry">
@@ -6063,10 +5879,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_10_btn">
        <property name="geometry">
@@ -6098,10 +5911,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_1_btn">
        <property name="geometry">
@@ -6150,10 +5960,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_7_btn">
        <property name="geometry">
@@ -6232,10 +6039,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_5_btn">
        <property name="geometry">
@@ -6300,10 +6104,7 @@ color: rgb(255, 255, 255);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_8_btn">
        <property name="geometry">
@@ -6335,10 +6136,7 @@ color: rgb(255, 255, 255);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_7_btn">
        <property name="geometry">
@@ -6371,10 +6169,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="gotolink_2_btn">
        <property name="geometry">
@@ -6407,10 +6202,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_4_btn">
        <property name="geometry">
@@ -6458,10 +6250,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_6_btn">
        <property name="geometry">
@@ -6493,10 +6282,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_5_btn">
        <property name="geometry">
@@ -6528,10 +6314,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_11_btn">
        <property name="geometry">
@@ -6563,10 +6346,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="order_2_btn">
        <property name="geometry">
@@ -6623,10 +6403,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_25">
        <property name="geometry">
@@ -6650,10 +6427,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_43">
         <property name="geometry">
@@ -6807,16 +6581,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_43">
         <property name="geometry">
@@ -7079,10 +6850,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_3_btn">
        <property name="geometry">
@@ -7114,10 +6882,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">border-image: url(:/newPrefix/Square.png);</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QPushButton" name="search_2_btn">
        <property name="geometry">
@@ -7158,10 +6923,7 @@ selection-color: rgb(112, 255, 124);</string>
        <string notr="true">font: 12pt &quot;Lato&quot;;</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <widget class="QFrame" name="frame_2">
        <property name="geometry">
@@ -7185,10 +6947,7 @@ selection-color: rgb(112, 255, 124);</string>
         <string notr="true">color: rgba(60, 135, 156, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="name_1">
         <property name="geometry">
@@ -7348,16 +7107,13 @@ selection-color: rgb(112, 255, 124);</string>
         </font>
        </property>
        <property name="layoutDirection">
-        <enum>Qt::RightToLeft</enum>
+        <enum>Qt::LeftToRight</enum>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgba(203, 74, 158, 1);</string>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <widget class="QLabel" name="price_1">
         <property name="geometry">
@@ -7633,7 +7389,7 @@ selection-color: rgb(112, 255, 124);</string>
        </rect>
       </property>
      </widget>
-     <zorder>main_backgorund</zorder>
+     <zorder>main_background</zorder>
      <zorder>item_1</zorder>
      <zorder>back_3</zorder>
      <zorder>frame_74</zorder>

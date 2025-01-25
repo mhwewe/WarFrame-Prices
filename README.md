@@ -17,7 +17,7 @@ TODO:
 
 5- fix item names not being centered ✅
 
-6- make the titel bar az thin as discord(also add icon and a titel for god sake)(almost done)
+6- make the titel bar az thin as discord(also add icon and a titel for god sake) ✅
 
 7- maybe HARD ONE: make the app launch immediately and then load the prices ✅
 
