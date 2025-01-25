@@ -43,7 +43,7 @@ class MainApp(QtWidgets.QWidget):
             self.search_buttons[i - 1].clicked.connect(getattr(self, f"start_search_thread_{i}"))
             self.search_buttons[i - 1].clicked.connect(lambda _, x=i: getattr(self, f"save_item_{x}")())
             self.search_buttons[i - 1].clicked.connect(
-                lambda state, x=i, btn=self.search_buttons[i - 1]: self.disabler(i, btn))
+                lambda state, x=i, btn=self.search_buttons[i - 1]: self.disabler(x, btn))
 
             self.gotolinks[i - 1].clicked.connect(getattr(self, f"gotolink{i}"))
             with open(f'Items.json') as file:
@@ -55,15 +55,7 @@ class MainApp(QtWidgets.QWidget):
 
     # Functions
     def disabler(self, i, btn):
-        print(f"{btn.objectName()} disabled {i}")
         btn.setEnabled(False)
-
-    def enabler(self, i, btn):
-        print(btn.objectName() + " enabled " + i)
-        if i <= 9:
-            self.names[i * 6].valueChanged(btn.setEnabled(True))
-        else:
-            self.names[i * 5 - 3].valueChanged(btn.setEnabled(True))
 
     def refresh(self):
         for i in range(1, 13):
@@ -108,11 +100,15 @@ class MainApp(QtWidgets.QWidget):
         try:
             c = 0
             if start_index <= 48:
+                starto = int((start_index) / 6)
+                self.search_buttons[starto].setEnabled(True)
                 for i in range(start_index, start_index + 6):
                     getattr(self, f"name_{i + 1}").setText(_translate("MainWindow", result[c][0]))
                     getattr(self, f"price_{i + 1}").setText(_translate("MainWindow", result[c][1]))
                     c += 1
             else:
+                starto = int((start_index + 3) / 6)
+                self.search_buttons[starto].setEnabled(True)
                 for i in range(start_index, start_index + 5):
                     getattr(self, f"name_{i + 1}").setText(_translate("MainWindow", result[c][0]))
                     getattr(self, f"price_{i + 1}").setText(_translate("MainWindow", result[c][1]))
@@ -123,9 +119,9 @@ class MainApp(QtWidgets.QWidget):
                     getattr(self, f"name_{i + 1}").setText(_translate("MainWindow", "Item does not exist"))
                     backo = (start_index / 6) + 1;
                     backo = int(backo)
-                    getattr(self, f"back_{backo}").setGraphicsEffect(QGraphicsBlurEffect())
-                    self.order_buttons[backo - 1].setGraphicsEffect(QGraphicsBlurEffect())
-                    self.gotolinks[backo - 1].setGraphicsEffect(QGraphicsBlurEffect())
+                    # getattr(self, f"back_{backo}").setGraphicsEffect(QGraphicsBlurEffect())
+                    # self.order_buttons[backo - 1].setGraphicsEffect(QGraphicsBlurEffect())
+                    # self.gotolinks[backo - 1].setGraphicsEffect(QGraphicsBlurEffect())
 
                     c += 1
             else:
@@ -133,9 +129,9 @@ class MainApp(QtWidgets.QWidget):
                     backo = (start_index / 6) + 1
                     backo = int(backo)
                     getattr(self, f"name_{i + 1}").setText(_translate("MainWindow", "Item does not exist"))
-                    getattr(self, f"back_{backo + 1}").setGraphicsEffect(QGraphicsBlurEffect())
-                    self.order_buttons[backo].setGraphicsEffect(QGraphicsBlurEffect())
-                    self.gotolinks[backo].setGraphicsEffect(QGraphicsBlurEffect())
+                    # getattr(self, f"back_{backo + 1}").setGraphicsEffect(QGraphicsBlurEffect())
+                    # self.order_buttons[backo].setGraphicsEffect(QGraphicsBlurEffect())
+                    # self.gotolinks[backo].setGraphicsEffect(QGraphicsBlurEffect())
                     c += 1
 
 

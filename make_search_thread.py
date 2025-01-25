@@ -48,7 +48,6 @@ class SearchWorker(QtCore.QObject):
         except Exception:
             self.result.emit(None)
         finally:
-            self.names[i * 6].valueChanged(btn.setEnabled(True))
             self.finished.emit()
 
     def run_2(self):
