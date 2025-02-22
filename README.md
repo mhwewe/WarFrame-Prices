@@ -1,7 +1,8 @@
 I'm Creating an application that automates my tasks and using it as a challenge to learn python, and taking every opportunity to learn more. 
 
 What this app does is istead of having 10 tabs open and switching between them constantly, I just run this app and I get multiple item prices in the same page.
-![image](https://github.com/user-attachments/assets/66bc82fa-4ab2-4c3d-96bd-07d2b5cb4409)
+![image](https://github.com/user-attachments/assets/1a30151e-9209-452b-91ec-ea242bf79214)
+
 
 
 
@@ -28,6 +29,8 @@ TODO:
 10- Add auto refresh for all of the  items, also add a way to customize how long every refresh takes with the minimum of once per 5 seconds(so that the app does not crash)(Added a refresh button instead)
 
 11- don't let the search button work until the last search has finished. ✅
+
+12- if you press enter the search button gets clicked
 
 
 What I learned:
