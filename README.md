@@ -30,7 +30,7 @@ TODO:
 
 11- don't let the search button work until the last search has finished. ✅
 
-12- if you press enter the search button gets clicked
+12- if you press enter the search button gets clicked. ✅
 
 
 What I learned:
