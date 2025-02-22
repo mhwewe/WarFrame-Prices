@@ -23,6 +23,6 @@ def main(item_link, arcane):
         i = i - 1
     for price_name in sorted(zip(prices, names)):
         name_price = (
-        price_name[1], f"{price_name[0]} P")
+        price_name[1], f"{price_name[0]}")
         lis.append(name_price)
     return lis
