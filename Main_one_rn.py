@@ -96,8 +96,13 @@ class MainApp(QtWidgets.QWidget):
         popup_2.setAttribute(Qt.WA_TranslucentBackground) #translucency
 
         def blur(i): #Blur stuff
+            for ff in range(0,12):
+                self.frames[ff].setGraphicsEffect(None)
+                self.backs[ff].setGraphicsEffect(None)
             self.frames[i].setGraphicsEffect(QGraphicsBlurEffect())
             self.backs[i].setGraphicsEffect(QGraphicsBlurEffect())
+            self.last_input = i #saves the last input for the Enter key function to know which button to click
+
         def unblur(i):
             self.frames[i].setGraphicsEffect(None)
             self.backs[i].setGraphicsEffect(None)
@@ -117,6 +122,11 @@ class MainApp(QtWidgets.QWidget):
 
     _translate = QtCore.QCoreApplication.translate  # idk
     # Functions
+
+    def keyPressEvent(self, event): #function for Enter key
+        if event.key() == 16777220:
+            self.search_buttons[self.last_input].click()
+
 
     # disables the button that was pressed
     def disabler(self, i, btn):
@@ -214,6 +224,8 @@ class MainApp(QtWidgets.QWidget):
                     # self.order_buttons[backo].setGraphicsEffect(QGraphicsBlurEffect())
                     # self.gotolinks[backo].setGraphicsEffect(QGraphicsBlurEffect())
                     c += 1
+
+
 
 
 def mainn():  # sets up the PyQt5 application
